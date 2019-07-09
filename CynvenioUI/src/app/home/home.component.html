@@ -1,0 +1,130 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class=" col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding:2% 2% 2% 4%">
+                <form name="form" (ngSubmit)="f.form.valid && submitPatient()" #f="ngForm" novalidate>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="row" style="margin-bottom: 1em">
+                                <div class="col-lg-12 col-md-6 col-sm-12">
+                                    <mat-form-field class="mat-drpdown">
+                                        <mat-label>Select Patient ID</mat-label>
+                                        <mat-select name="namevalue" [(ngModel)]="selectedPatient" required>
+                                            <mat-option *ngFor="let patient of patients" [value]="patient.value">
+                                                {{patient.viewValue}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 center">
+                                    <button class="btn btn-primary cyn-btn-block" type="submit"><i class="material-icons">
+                      cloud_upload&nbsp;&nbsp;
+                    </i>Submit</button>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 center">
+                                    <button class="btn btn-cancel cyn-btn-block" type="button" (click)="cancelPatient()"><i
+                      class="material-icons">
+                      cancel&nbsp;&nbsp;
+                    </i>Cancel</button>
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+
+                    </div>
+                </form>
+                <div class="row" style="padding-top: 10%;" *ngIf="isMetaData">
+                    <div class="col-lg-12 col-md-12 col-sm-12" style="margin-bottom:1em">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title card-attr-value">Data Profile</p>
+                                <p class="card-text"><span class="card-label">Total Number of Images : </span><span class="card-value">{{imagesCount}}
+                  </span></p>
+                                <!-- <p class="card-text"><span class="card-label">Total number of Aqua images : </span><span class="card-value">500</span></p>
+                <p class="card-text"><span class="card-label">Total number of Gold images : </span><span class="card-value">500</span></p>
+                <p class="card-text"><span class="card-label">Total number of Green images : </span><span class="card-value">500</span></p> -->
+
+                            </div>
+                        </div>
+                        <div class="processing-status" *ngIf="completionStatus == 2">
+                            <span>This Patient has already been processed.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class=" col-lg-8 col-md-8 col-sm-6 col-xs-12" style="padding: 2%;">
+
+
+                <div class="row">
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" *ngIf="isStartProcessing">
+                        <div class="graph-block">
+                            <button class="btn btn-primary cyn-btn-block" (click)="startProcessing()"><i class="material-icons">
+                  &nbsp;&nbsp;
+                </i>{{completionStatus==2?'View Result':'Start Processing'}}</button>
+                        </div>
+                    </div>
+                    <div class=" col-lg-10 col-md-10 col-sm-10 col-xs-10 loading-spin" *ngIf="loading">
+                        <div style="display:inline-block">
+                            <label class="progress-bar-label-left">{{currentProcessingCount}}/{{imagesCount}} images processed</label>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" [style.width.%]="processingPercentCount">{{processingPercentCount}}% Completed</div>
+
+                        </div>
+                        <div>
+                            <label class="progress-bar-label-left">Please Wait..</label>
+                        </div>
+                        <!-- <canvas class="loader"></canvas> -->
+                        <!-- <mat-progress-spinner aria-labelledby="foo" class="example-margin" mode="determinate" [value]="processingPercentCount">
+              
+            </mat-progress-spinner>
+            <label class="loading-label">{{loadingLabel}}</label><br>
+            <label class="loading-label" *ngIf="totalProcessingCount>0">{{currentProcessingCount}}/{{totalProcessingCount}} processing completed</label> -->
+                    </div>
+                    <div class=" col-lg-10 col-md-10 col-sm-10 col-xs-10" *ngIf="!loading && isGraphAvailable">
+                        <!-- <div class=" col-lg-10 col-md-10 col-sm-10 col-xs-10" *ngIf="false"> -->
+                        <div class="graph-label">
+                            <p class="card-text"><span class="card-label">Number of Clump Cells : </span><span class="card-value">{{stats.clump}}</span></p>
+                            <p class="card-text"><span class="card-label">Number of Processed Cells : </span><span class="card-value">{{stats.processed_cells}}</span></p>
+                            <p class="card-text"><span class="card-label">Number of Unclassified Cells: </span><span class="card-value">{{stats.unclassified}}</span></p>
+                            <!-- <p class="card-text"><span class="card-label">Total number of Gold images : </span><span class="card-value">500</span></p> -->
+
+                        </div>
+                        <div>
+                            <canvas *ngIf="!isToggleChart" baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" [options]="doughnutChartOptions" [colors]="barcolors">
+              </canvas>
+                            <!-- <canvas *ngIf="!isToggleChart" baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+                [options]="pieChartOptions">
+              </canvas> -->
+                            <canvas baseChart *ngIf="isToggleChart" [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [chartType]="barChartType" [colors]="barcolors">
+              </canvas>
+
+
+                            <div class="row" style="padding-top:10px">
+                                <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-left">
+                                    <button style="margin-right:10px" class="btn btn-primary btn-examine" (click)="toggleChart()">Toggle
+                    Chart</button>
+                                </div>
+                                <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-right" style="text-align: right;">
+                                    <button class="btn btn-primary btn-examine" routerLink="/dexpert">Examine</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

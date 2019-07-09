@@ -1,0 +1,17 @@
+.navbar-inverse {
+  background: linear-gradient(to right, #004bc7 0%, #2874f0 100%);
+  border-color: #f9fafa;
+  min-height: 50px;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #f9fafa;
+  display: inline-flex;
+}
+
+.bg-image {
+  background: url(../assets/img/bg.gif);
+}
+.home-icon {
+  color: white;
+  display: inline-flex;
+}

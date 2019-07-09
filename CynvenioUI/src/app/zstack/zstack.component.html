@@ -1,0 +1,238 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <button class="btn btn-primary" routerLink="/dexpert"><i class="material-icons">
+                keyboard_backspace&nbsp;&nbsp;
+              </i>Back</button>
+          </div>
+
+        </div>
+        <div class="row form-edit">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="card" style="margin-bottom: 10px;">
+              <p class="card-text" style="padding: 10px;"><span class="card-label">Patient ID : </span><span
+                  class="card-value">{{patientID}}
+                </span></p>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12">
+
+            <mat-form-field class="mat-drpdown">
+              <mat-label>Selected Probe</mat-label>
+              <mat-select [(ngModel)]="selectedProb" (selectionChange)="onSelectedChange($event)">
+                <mat-option *ngFor="let prob of probs" [value]="prob.value">
+                  {{prob.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="card">
+              <div class="card-body">
+
+                <form name="form" (ngSubmit)="f.form.valid && updateFormValues()" #f="ngForm" novalidate>
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 form-edit">
+                      <span class="card-value ">Aqua : </span>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-6">
+                      <span class="card-value">
+                        <mat-form-field class="dexpert-input">
+                          <input matInput [ngClass]="(formObj.expert_update==1)?'updated':'not-updated'" type="number"
+                            [(ngModel)]="formObj.aqua" name='aqua' [disabled]="!updateBtn" min="-1" max="21" required>
+                        </mat-form-field>
+                      </span>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
+                      <mat-form-field class="mat-drpdown">
+                        <mat-label>Aqua Comment</mat-label>
+                        <mat-select name="commentAqua" [disabled]="!updateBtn" [(ngModel)]="formObj.comment_aqua">
+                          <mat-option *ngFor="let comment of commentsProbe" [value]="comment.value">
+                            {{comment.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 form-edit">
+                      <span class="card-value ">Gold : </span>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-6">
+                      <span class="card-value">
+                        <mat-form-field class="dexpert-input">
+                          <input matInput [ngClass]="(formObj.expert_update==1)?'updated':'not-updated'" type="number"
+                            [(ngModel)]="formObj.gold" name='gold' [disabled]="!updateBtn" min="-1" max="21" required>
+                        </mat-form-field>
+                      </span>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
+                      <mat-form-field class="mat-drpdown">
+                        <mat-label>Gold Comment</mat-label>
+                        <mat-select name="commentGold" [disabled]="!updateBtn" [(ngModel)]="formObj.comment_gold">
+                          <mat-option *ngFor="let comment of commentsProbe" [value]="comment.value">
+                            {{comment.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 form-edit">
+                      <span class="card-value ">Green : </span>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-6">
+                      <span class="card-value">
+                        <mat-form-field class="dexpert-input">
+                          <input matInput [ngClass]="(formObj.expert_update==1)?'updated':'not-updated'" type="number"
+                            [(ngModel)]="formObj.green" name='green' [disabled]="!updateBtn" min="-1" max="21" required>
+                        </mat-form-field>
+                      </span>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
+                      <mat-form-field class="mat-drpdown">
+                        <mat-label>Green Comment</mat-label>
+                        <mat-select name="commentGreen" [disabled]="!updateBtn" [(ngModel)]="formObj.comment_green">
+                          <mat-option *ngFor="let comment of commentsProbe" [value]="comment.value">
+                            {{comment.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 form-edit">
+                      <span class="card-value ">Red : </span>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-6">
+                      <span class="card-value">
+                        <mat-form-field class="dexpert-input">
+                          <input matInput [ngClass]="(formObj.expert_update==1)?'updated':'not-updated'" type="number"
+                            [(ngModel)]="formObj.red" name='red' [disabled]="!updateBtn" min="-1" max="21" required>
+                        </mat-form-field>
+                      </span>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12">
+                      <mat-form-field class="mat-drpdown">
+                        <mat-label>Red Comment</mat-label>
+                        <mat-select name="commentRed" [disabled]="!updateBtn" [(ngModel)]="formObj.comment_red">
+                          <mat-option *ngFor="let comment of commentsProbe" [value]="comment.value">
+                            {{comment.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 form-edit">
+                      <mat-form-field class="mat-drpdown">
+                        <mat-label>Provide Comments</mat-label>
+                        <mat-select name="prob" [(ngModel)]="formObj.comment" [disabled]="!updateBtn">
+                          <mat-option *ngFor="let comment of comments" [value]="comment.value">
+                            {{comment.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 form-edit" *ngIf="formObj.comment == 'Open Comment'">
+                      <mat-form-field class="example-full-width">
+                        <input matInput name="manualComment" [(ngModel)]="formObj.openComment" [disabled]="!updateBtn" placeholder="Enter Comments here">
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row" style="margin-top: 10%;">
+                    <div class="col-lg-12 col-md-12">
+                      <button *ngIf="updateBtn" type="submit" class="btn btn-info pull-right"
+                        style="margin-left:10px">Update
+                      </button>
+                      <button type="button" class="btn btn-warning pull-right"
+                        (click)="editInfo()">{{editBtnLabel}}</button>
+                    </div>
+
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col-lg-9 col-md-9 col-sm-12">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 cell-index-column">
+            <span class="cell-index-label"> Current Cell {{currentCell+1}} / {{totalCell}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-11 col-md-11 col-sm-11">
+
+            <div class="loading-spin" *ngIf="loading">
+              <!-- <canvas class="loader"></canvas> -->
+              <mat-progress-spinner aria-labelledby="foo" class="example-margin" mode="indeterminate">
+
+              </mat-progress-spinner>
+              <label class="loading-label">{{loadingLabel}}</label>
+            </div>
+
+            <div class="example-container mat-elevation-z8" *ngIf="dataSource">
+
+              <div *ngIf="dataSource.length==0 && !loading" style="margin: 8em 0em 8em 0em;
+                                text-align: center;
+                                font-size: 20px;">Could
+                not find ZStack Images for {{selectedProb}}. Please try again</div>
+
+              <ngb-carousel *ngIf="dataSource.length>0" class="myCarousel" [showNavigationArrows]="showNavigationArrows"
+                [showNavigationIndicators]="showNavigationIndicators" [activeId]="activeSliderId" #currSlide
+                (click)="onSlideChange(currSlide)">
+                <ng-template ngbSlide [id]="i" *ngFor="let image of dataSource; let i= index;">
+
+                  <div style="display: inline-flex;margin-left: 2em;margin-right: 2em">
+                    <div *ngIf="true" style="height: 26em;
+                    width: 26em;border-color: black;
+                            border-style: solid;
+                            border-radius: 15px;
+                            padding: 5px;overflow-y: scroll;
+                            overflow-x: hidden;">
+
+                      <img src="{{image.imagePath}}" class="img-carousal-big img-rounded img-rounded-grid"
+                        alt="Cinque Terre">
+                    </div>
+                    <div style="padding: 10px;
+                                      margin-right: 0em;
+                                      padding-top: 10em;
+                                      background: #9c9c9c;padding-right: 63px;">
+                      <div class="image-info">
+                        <div class="image-heading">Showing Results</div>
+                        <div class="image-pdf-content">{{i+1}} / {{dataSource.length}}</div>
+
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-carousel>
+              <div *ngIf="dataSource.length>0" class="img-slide">
+                <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1000" min="1" max="21"
+                  [value]="activeSliderId+1" (input)="onInput($event)"></mat-slider>
+              </div>
+
+
+
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>

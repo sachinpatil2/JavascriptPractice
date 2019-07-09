@@ -1,0 +1,313 @@
+
+.app-content{
+  margin: 100px;
+  padding: 50px;
+
+}
+
+table tr, .table-condensed>thead>tr>td, .table-condensed>tbody>tr>td {
+  padding-bottom: 20px;
+  }
+nav > div > div > a > img{
+    height: 7em;
+    margin-top: -3em;
+  }
+ .navbar-inverse{
+  margin-right: -2%;
+  margin-left: -3%;
+   background: linear-gradient(to right, #ffffff 0%, #2874f0 100%);
+   border-color: #f9fafa;
+   min-height: 50px;
+ }
+ .navbar-inverse .navbar-nav>li>a{
+   color: #f9fafa;
+ }
+ div.example-container.mat-elevation-z8{
+
+    border-style: solid;
+    border-color: #eeeeee;
+    border-width: 5px;
+    border-radius: 13px;
+    /* width: 50%; */
+}
+input.filter{
+    /* width: 50%; */
+    margin-bottom: 1%;
+    border-radius: 10px;
+}
+div > form.searchForm{
+  display:flex;
+}
+svg{
+  width: 100% !important;
+  height: 100% !important;
+}
+div > mat-table > mat-header-row{
+  background-color: lightgoldenrodyellow;
+}
+.panel-heading {
+    color: #333333;
+    border-color: #dddddd;
+    /* margin-bottom: 20px; */
+    background-color: #d3e2ef;
+    border: 1px solid transparent;
+    border-radius: 12px 10px 0px 0px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+mat-table > mat-row:nth-child(odd){
+  background-color: white;
+}
+mat-table > mat-row:nth-child(even){
+  background-color: #f4f5f5;
+}
+div.example-container.mat-elevation-z8 > mat-table{
+  color: #333333;
+}
+mat-cell:first-of-type, mat-footer-cell:first-of-type, mat-header-cell:first-of-type{
+      margin-right: -10em;
+}
+mat-cell:last-of-type, mat-footer-cell:last-of-type, mat-header-cell:last-of-type{
+      margin-right: -4em;
+}
+
+.topic-text{
+    margin: 1em;
+    padding: 1.5em 1.5em 1.5em 1.5em;
+    background-color: white;
+    background-image: url(https://www.w3schools.com/howto/searchicon.png);
+    background-position: 22em 10px;
+    background-repeat: no-repeat;
+    transition: width 0.4s ease-in-out;
+    width: 25em;
+    border-radius: 10px;
+}
+label.graph-label{
+    margin-left: 20%;
+    margin-top: 2%;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-style: normal;
+    color: #337ab7;
+}
+mat-table > mat-header-row mat-header-cell{
+  font-size: 15px;
+  font-weight: 600;
+  color: #337ab7;
+}
+mat-table > mat-row mat-cell{
+    font-size: 15px;
+    font-weight: 500;
+    color: #1963a2;
+}
+
+mat-table > mat-row:hover {background-color:#f5f5f5;}
+
+mat-table > mat-row > mat-cell.cdk-column-email.mat-column-email{
+  margin-right: 2em;
+}
+/* mat-table > mat-header-row > mat-header-cell.mat-header-cell.ng-tns-c3-4.cdk-column-email.mat-column-email.ng-star-inserted */
+mat-table > mat-header-row > mat-header-cell.cdk-column-email.mat-column-email{
+  margin-right: 2em;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  margin: 8em 0em 8em 18em;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#ui-id-1{
+  margin-left: 13%;
+  margin-top: 9%;
+}
+.search-row{
+  margin-left: 5%;
+ padding-bottom: 1%
+}
+.search-btn{
+  margin: 1em 0em 0em 1em; width: 15em; border-radius: 10px;height:45px;
+}
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .navbar-inverse .navbar-nav>li>a{
+    color: #ffffff;
+  }
+  nav > div > div > a > img{
+    height: 5em;
+    margin-top: -2em;
+    margin-left: -1em;
+  }
+  .search-row{
+   margin-left: -15px;
+   /* padding-bottom: 1% */
+  }
+  div > form.searchForm{
+    display:block;
+    margin-right: 15px;
+  }
+  .topic-text{
+    margin: 1em;
+    padding: 1.5em 1.5em 1.5em 1.5em;
+    background-color: white;
+    background-image: url(https://www.w3schools.com/howto/searchicon.png);
+    background-position: 95% 10px;
+    background-repeat: no-repeat;
+    transition: width 0.4s ease-in-out;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .search-btn{
+    margin: 0em 0em 1em 1em;
+    width: 100%;
+  }
+  mat-table{
+    width: 100%;
+  }
+  .mat-table-div{
+    overflow-x: auto;
+  }
+  .container-fluid{
+    display: inline-flex;
+  }
+  .nav.navbar-nav.navbar-right{
+    position: relative;
+    /* right: -13em; */
+    /* left: 13em; */
+    left: calc(740px + 100vw - 1024px)!important;
+  }
+  .loader{
+    margin: 8em 0em 8em 6em;
+    margin-left: calc(300px + 100vw - 767px)!important;
+  }
+  mat-cell:last-of-type, mat-footer-cell:last-of-type, mat-header-cell:last-of-type{
+    margin-right: 0em;
+  }
+  .navbar-inverse{
+    margin-right: -2em;
+    margin-left: -2em;
+  }
+
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .navbar-inverse .navbar-nav>li>a{
+    color: #ffffff;
+  }
+  nav > div > div > a > img{
+    height: 5em;
+    margin-top: -2em;
+    margin-left: -1em;
+  }
+  .search-row{
+   margin-left: -15px;
+   /* padding-bottom: 1% */
+  }
+  div > form.searchForm{
+    display:block;
+    margin-right: 15px;
+  }
+  .topic-text{
+    margin: 1em;
+    padding: 1.5em 1.5em 1.5em 1.5em;
+    background-color: white;
+    background-image: url(https://www.w3schools.com/howto/searchicon.png);
+    background-position: 95% 10px;
+    background-repeat: no-repeat;
+    transition: width 0.4s ease-in-out;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .search-btn{
+    margin: 0em 0em 1em 1em;
+    width: 100%;
+  }
+  mat-table{
+    width: 180%;
+  }
+  .mat-table-div{
+    overflow-x: auto;
+  }
+  .container-fluid{
+    display: inline-flex;
+  }
+  .nav.navbar-nav.navbar-right{
+    position: relative;
+    /* right: -13em; */
+    /* left: 13em; */
+    left: calc(740px + 100vw - 1024px)!important;
+  }
+  .loader{
+    margin: 8em 0em 8em 6em;
+    margin-left : calc(200px + 100vw - 480px)!important;
+  }
+  mat-cell:last-of-type, mat-footer-cell:last-of-type, mat-header-cell:last-of-type{
+    margin-right: 0em;
+  }
+  .navbar-inverse{
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  #graphdb{
+    height: 27em;
+  }
+}

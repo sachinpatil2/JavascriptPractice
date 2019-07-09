@@ -1,0 +1,152 @@
+.card-label {
+    color: #999999;
+    font-size: 14px;
+}
+
+.card-value {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.card-attr-value {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.dexpert-input {
+    width: 3em;
+}
+
+.cell-index-label {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.cell-index-column {
+    text-align: center;
+    padding: 0;
+}
+
+.img-rounded-grid {
+    width: 100%;
+    height: calc(100vh - 78vh);
+    /* margin: 5px; */
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.14), 0 4px 5px -5px rgba(0, 0, 0, 0.4);
+    border: 1px blue solid;
+}
+
+.img-rounded-cell {
+    width: 100%;
+    height: calc(100vh - 39vh);
+    /* margin: 10px; */
+}
+
+.img-column {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.img-label {
+    color: #70757a;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    max-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mat-drpdown {
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.btn-zstack {
+    width: 15em;
+}
+
+.btn-flex {
+    display: inline-flex;
+}
+
+.form-edit {
+    padding-top: 1em;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+#container {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+}
+
+.updated {
+    color: rgba(255, 0, 0);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.not-updated {
+    color: rgba(0, 100, 0);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.mat-select-disabled {
+    cursor: not-allowed;
+}
+
+.magnifier-preview {
+    /* display: none; */
+    box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 1), 0 0px 10px -3px rgba(0, 0, 0, 1);
+    width: 500px !important;
+    height: 400px !important;
+    /* display: none; */
+    margin-top: -30em;
+    /* margin-right: -29em; */
+    right: -18em;
+    /* top: -25em; */
+    border: 1px blue solid;
+    z-index: 1000;
+}
+
+.padding-zero {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.note-tag {
+    color: #0008ff;
+    background-color: #f1f1e7;
+    padding: 3px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    line-height: 20px;
+}
+
+@media only screen and (min-width: 1490px) {}
+
+@media only screen and (max-width: 1490px) and (min-width: 1366px) {}
+
+@media only screen and (max-width: 1366px) and (min-width: 1280px) {}
+
+@media only screen and (max-width: 1280px) and (min-width: 1024px) {}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {}

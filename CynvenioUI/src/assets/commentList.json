@@ -1,0 +1,21 @@
+[
+    "Clumps",
+    "Not Clumps (or single cell)",
+    "Satellite Probe",
+    "Split Signal",
+    "Background",
+    "Overlapping Signal",
+    "Nonspecific Binding",
+    "Unbound Probe",
+    "Folded Cell",
+    "On Edge",
+    "Out of Bounds",
+    "Bleed Through",
+    "Interfering Debris",
+    "Spurious",
+    "4X4",
+    "Missed Probe",
+    "Poor probing",
+    "Unclassify",
+    "Open Comment"
+]

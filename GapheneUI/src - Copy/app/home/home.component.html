@@ -1,0 +1,152 @@
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">
+        <img [src]="logo" class="img-rounded" alt="Cinque Terre">
+      </a>
+    </div>
+
+
+    <ul class="nav navbar-nav navbar-right">
+      <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+      <li><a href="/login"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="search-row">
+  <div>
+  <form class="searchForm" [formGroup]="searchForm" (ngSubmit)="fetchData()">
+    <div class="form-group">
+    <i class="fa fa-search" aria-hidden="true"></i>
+      <input class="form-control topic-text" id="topic" type="text" name="topic" formControlName="topic" placeholder="Search here" >
+      <div *ngIf="submitted && f.topic.errors" class="invalid-feedback is-invalid" style="margin-left: 1em;color:red">
+          <div *ngIf="f.topic.errors.minlength">Topic Name must be at least 3 char long</div>
+          <div *ngIf="f.topic.errors.required">Topic Name is required</div>
+
+      </div>
+    </div>
+
+
+    <div class="form-group">
+         <button class="btn btn-primary search-btn">Search</button>
+     </div>
+
+
+  </form>
+
+
+</div>
+
+    <div style="padding:0 20px;display:flex" *ngIf="isSimilarTopics">
+
+          <p class="gqLncc card-section" aria-level="3" role="heading" style="font-size:18px">
+              <span class="gL9Hy d2IKib" style="color:red;font-size:18px">Did you mean:</span>
+              <!-- <a *ngFor="let similarTopic of similarTopics; index as i" class="gL9Hy" href="/">
+              <b><i>{{similarTopic}}</i></b><br></a>  -->
+
+            <ul  style="list-style-type:none;padding-left: 1em;">
+              <li *ngFor="let similarTopic of similarTopics; index as i" (click)="fetchData(similarTopic,true)"><a><b><i>{{similarTopic}}</i></b></a></li>
+            </ul>
+
+
+
+
+    </div>
+
+
+</div>
+<!--
+<table class="table table-hover table-condensed" style="padding: 50px;margin-left: 100px;margin-right: 100px;">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Top Ranking Employee</th>
+      <th scope="col">Email ID</th>
+      <th scope="col">Related Topic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of datas;let i = index">
+      <th>{{i+1}}</th>
+      <td>{{data.emplyee_name}}</td>
+      <td>{{data.email}}</td>
+      <td>{{data.topic_list}}</td>
+    </tr>
+
+  </tbody>
+</table>
+
+-->
+
+
+
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-12 scroll-div">
+
+  <input class="form-control filter" (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+
+  <div class="panel-heading" >Search Results For : <label style="color: #337ab7;
+    font-style: italic;">{{topic}}</label></div>
+
+      <div class="example-container mat-elevation-z8">
+  <div *ngIf="!isDataExist" style="margin: 8em 0em 8em 0em;
+    text-align: center;
+    font-size: 20px;">No Data to display here</div>
+    <div class="loader" *ngIf="loading" style="margin: 8em 0em 8em 18em;"></div>
+
+    <div class="mat-table-div" [hidden]="!isDataExist || loading">
+  <mat-table [dataSource]="dataSource" matSort >
+
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="userID">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> # </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.userID}} </mat-cell>
+    </ng-container>
+
+    <!-- Email ID Column -->
+    <ng-container matColumnDef="userName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Employee Name </mat-header-cell>
+      <mat-cell *matCellDef="let row" >{{row.userName}} </mat-cell>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Email ID </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.email}} </mat-cell>
+    </ng-container>
+
+     <!-- Designation Column -->
+    <ng-container matColumnDef="designation">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Designation </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.designation}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;">
+    </mat-row>
+
+  </mat-table></div>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+
+
+
+</div>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+   <!-- style="border-color: #7e7e7e;
+    border-style: groove;
+    border-radius: 13px;
+    border-collapse: collapse;
+    box-shadow: 5px 10px 10px 10px;"> -->
+      <label class="graph-label" *ngIf="isDataExist">Graph visualization - Zoom In/Out, Move</label>
+      <div id="graphdb">
+
+      </div>
+  </div>
+</div>
+
+
+
+

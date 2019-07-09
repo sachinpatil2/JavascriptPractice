@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.main-content {
+    margin: 1em;
+    max-height: calc(100vh - 85px);
+}
+
+.btn {
+    display: inline-flex;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    width: 2em !important;
+    background-color: black;
+}
+
+.mat-input-element:disabled,
+.mat-select-disabled {
+    cursor: not-allowed;
+}
+
+#container {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+}
+
+.ngxImageZoomThumbnail {
+    width: 100%;
+    height: calc(100vh - 39vh);
+}
+
+.mat-select-value {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.tooltip.show {
+    opacity: 1 !important;
+}
+
+.tooltip-inner {
+    max-width: 400px !important;
+    font-size: 15px !important;
+    color: #ffffff !important;
+    background-color: #6f6f6f !important;
+    font-weight: 500 !important;
+    text-align: left !important;
+    box-shadow: 2px 2px 2px 1px #989898 !important;
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+    border-bottom-color: #6f6f6f !important;
+}

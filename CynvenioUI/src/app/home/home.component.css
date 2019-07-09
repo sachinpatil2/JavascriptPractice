@@ -1,0 +1,132 @@
+.btn-block {
+    display: inline-block;
+}
+
+.cyn-btn-block {
+    display: inline-flex;
+}
+
+.btn-cancel {
+    border-color: black;
+}
+
+.graph-block {
+    text-align: center;
+    margin-top: 30%;
+    /* margin-bottom: 50%; */
+    width: 100%;
+}
+
+.card-label {
+    color: #999999;
+    font-size: 14px;
+}
+
+.card-value {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.card-attr-value {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+.graph-label {
+    text-align: left;
+    margin-bottom: 0.5em;
+    flex: 1 1 auto;
+    padding: 1rem;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.mat-drpdown {
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn-examine {
+    width: 10em;
+}
+
+.loading-spin {
+    padding-top: 15%;
+    padding-left: 30%;
+}
+
+.loading-label {
+    color: #3f51b5;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    max-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* top: 0px; */
+    /* left: 26px; */
+    margin-left: -50px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.progress-bar-label-left {
+    float: left;
+    color: #3f51b5;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.progress-bar-label-right {
+    float: right;
+    color: #3f51b5;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.progress {
+    display: flex;
+    height: 2rem;
+    overflow: hidden;
+    font-size: 1rem;
+    background-color: #e9ecef;
+    border-radius: .25rem;
+}
+
+.progress-bar {
+    color: black;
+}
+
+.processing-status {
+    color: #179400;
+    background-color: #f1f1e7;
+    padding: 3px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    line-height: 20px;
+}

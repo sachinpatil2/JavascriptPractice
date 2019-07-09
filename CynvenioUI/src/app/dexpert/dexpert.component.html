@@ -1,0 +1,273 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="card" style="margin-bottom: 10px;">
+                            <p class="card-text" style="padding: 10px;"><span class="card-label">Patient ID : </span><span class="card-value">{{patientID}}
+                </span></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+
+                        <mat-form-field class="mat-drpdown">
+                            <mat-label>Selected Probe</mat-label>
+                            <mat-select name="prob" [(ngModel)]="selectedProb" (selectionChange)="onSelectedChange($event)">
+                                <mat-option *ngFor="let prob of probs" [value]="prob.value">
+                                    {{prob.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+
+                                <form name="form" (ngSubmit)="f.form.valid && updateFormValues()" #f="ngForm" novalidate>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 form-edit">
+                                            <span class="card-value ">Aqua : </span>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-6 padding-zero">
+                                            <span class="card-value">
+                        <mat-form-field class="dexpert-input">
+                          <input matInput [ngClass]="(formObj.expert_update==1)?'updated':'not-updated'" type="number"
+                            [(ngModel)]="formObj.aqua" name='aqua' [disabled]="!updateBtn" min="-1" max="21"
+                             required>
+                        </mat-form-field>
+                      </span>
+                                        </div>
+                                        <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12" *ngIf="true">
+                                            <mat-form-field class="mat-drpdown">
+                                                <mat-label>Aqua Comment</mat-label>
+                                                <mat-select name="commentAqua" [disabled]="!updateBtn" [(ngModel)]="formObj.comment_aqua">
+                                                    <mat-option *ngFor="let comment of commentsProbe" [value]="comment.value">
+                                                        {{comment.viewValue}}
+                                                    </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 form-edit">
+                                            <span class="card-value ">Gold : </span>
+                                        </div>
+                                        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6 padding-zero">
+                                            <span class="card-value">
+                        <mat-form-field class="dexpert-input">
+                          <input matInput [ngClass]="(formObj.expert_update==1)?'updated':'not-updated'" type="number"
+                            [(ngModel)]="formObj.gold" name='gold' [disabled]="!updateBtn" min="-1" max="21"
+                            maxlength="5" required>
+                        </mat-form-field>
+                      </span>
+                                        </div>
+                                        <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12" *ngIf="true">
+                                            <mat-form-field class="mat-drpdown">
+                                                <mat-label>Gold Comment</mat-label>
+                                                <mat-select name="commentGold" [disabled]="!updateBtn" [(ngModel)]="formObj.comment_gold">
+                                                    <mat-option *ngFor="let comment of commentsProbe" [value]="comment.value">
+                                                        {{comment.viewValue}}
+                                                    </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 form-edit">
+                                            <span class="card-value ">Green : </span>
+                                        </div>
+                                        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6 padding-zero">
+                                            <span class="card-value">
+                        <mat-form-field class="dexpert-input">
+                          <input matInput [ngClass]="(formObj.expert_update==1)?'updated':'not-updated'" type="number"
+                            [(ngModel)]="formObj.green" name='green' [disabled]="!updateBtn" min="-1" max="21" required>
+                        </mat-form-field>
+                      </span>
+                                        </div>
+                                        <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12" *ngIf="true">
+                                            <mat-form-field class="mat-drpdown">
+                                                <mat-label>Green Comment</mat-label>
+                                                <mat-select name="commentGreen" [disabled]="!updateBtn" [(ngModel)]="formObj.comment_green">
+                                                    <mat-option *ngFor="let comment of commentsProbe" [value]="comment.value">
+                                                        {{comment.viewValue}}
+                                                    </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 form-edit">
+                                            <span class="card-value ">Red : </span>
+                                        </div>
+                                        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6 padding-zero">
+                                            <span class="card-value">
+                        <mat-form-field class="dexpert-input">
+                          <input matInput [ngClass]="(formObj.expert_update==1)?'updated':'not-updated'" type="number"
+                            [(ngModel)]="formObj.red" name='red' [disabled]="!updateBtn" min="-1" max="21" required>
+                        </mat-form-field>
+                      </span>
+                                        </div>
+                                        <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12" *ngIf="true">
+                                            <mat-form-field class="mat-drpdown">
+                                                <mat-label>Red Comment</mat-label>
+                                                <mat-select name="commentRed" [disabled]="!updateBtn" [(ngModel)]="formObj.comment_red">
+                                                    <mat-option *ngFor="let comment of commentsProbe" [value]="comment.value">
+                                                        {{comment.viewValue}}
+                                                    </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 form-edit">
+                                            <mat-form-field class="mat-drpdown">
+                                                <mat-label>Provide Comments</mat-label>
+                                                <mat-select name="prob" [(ngModel)]="formObj.comment" [disabled]="!updateBtn">
+                                                    <mat-option *ngFor="let comment of comments" [value]="comment.value">
+                                                        {{comment.viewValue}}
+                                                    </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 form-edit" *ngIf="formObj.comment == 'Open Comment'">
+                                            <mat-form-field class="example-full-width">
+                                                <input matInput name="manualComment" [(ngModel)]="formObj.openComment" placeholder="Enter Comments here" [disabled]="!updateBtn">
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top: 10%;">
+                                        <div class="col-lg-12 col-md-12">
+                                            <button *ngIf="updateBtn" mat-raised-button type="submit" class="btn btn-info pull-right" style="margin-left:10px">Update
+                      </button>
+                                            <button mat-raised-button type="button" [disabled]="selectedProbeCellsData.length == 0" class="btn btn-warning pull-right" (click)="editInfo()">{{editBtnLabel}}</button>
+
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <ng-template #tipContent>
+                    <div [innerHTML]="formObj.reason_label"></div>
+                </ng-template>
+                <div class="note-tag" *ngIf="formObj.reason_label" placement="bottom" [ngbTooltip]="tipContent">
+                    <!-- <div class="col-lg-12 col-md-12"> -->
+
+                    <div *ngIf="formObj.reason_label.length>60" [innerHTML]="formObj.reason_label.substring(0,55)+'...'"></div>
+                    <div *ngIf="formObj.reason_label.length<=60" [innerHTML]="formObj.reason_label"></div>
+                    <!-- </div> -->
+                </div>
+                <!-- <button type="button" class="btn btn-outline-secondary mr-2" placement="top" ngbTooltip="Tooltip on top">
+                  Tooltip on top
+                </button> -->
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 img-column">
+                        <img *ngIf="images.dapi" src="{{images.dapi}}" class="img-rounded img-rounded-grid" alt="Cinque Terre">
+                        <span class="img-label"> Dapi</span>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 img-column">
+                        <img *ngIf="images.combined" src="{{images.combined}}" class="img-rounded img-rounded-grid" alt="Cinque Terre">
+                        <span class="img-label"> Combined</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 img-column">
+                        <img *ngIf="images.green" src="{{images.green}}" class="img-rounded img-rounded-grid" alt="Cinque Terre">
+                        <span class="img-label"> Green</span>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 img-column">
+                        <img *ngIf="images.red" src="{{images.red}}" class="img-rounded img-rounded-grid" alt="Cinque Terre">
+                        <span class="img-label">Red</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 img-column">
+                        <img *ngIf="images.aqua" src="{{images.aqua}}" class="img-rounded-grid" alt="Cinque Terre">
+                        <span class="img-label"> Aqua</span>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 img-column">
+
+                        <a class="magnifier-thumb-wrapper img-rounded-grid">
+                            <img id="thumb" *ngIf="images.gold" src="{{images.gold}}" style="width:100%;height:100%" (load)="drawMagnifier()">
+                        </a>
+                        <span class="img-label"> Gold</span>
+                        <!-- <div style="visibility:hidden" class="magnifier-preview" id="preview" style="width: 300px; height: 233px">
+            </div> -->
+
+                        <!-- <img *ngIf="images.red" src="{{images.red}}" (load)="drawMagnifier()" class="img-rounded-grid"
+             > -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12">
+                <div class="row" style="padding-bottom: 1em;">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <button class="btn btn-primary btn-flex" (click)="prevCell()"><i class="material-icons">
+                skip_previous&nbsp;&nbsp;
+              </i>Previous Cell</button>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 cell-index-column">
+                        <span class="cell-index-label" *ngIf="selectedProbeCellsData.length==0"> Current Cell 0/0</span>
+                        <span class="cell-index-label" *ngIf="selectedProbeCellsData.length>0"> Current Cell {{activeCell+1}}/{{selectedProbeCellsData.length}}</span>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 right">
+                        <button class="btn btn-primary btn-flex" (click)="nextCell()">Next Cell<i class="material-icons">
+                &nbsp;&nbsp;skip_next
+              </i></button>
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 img-column">
+
+                        <div id="container">
+
+                            <img id="globalDapi" src="{{images.global_dapi}}" (load)="drawReactangle()" class="img-rounded img-rounded-cell" alt="No Image Available">
+                            <span class="img-label">{{images.globalDapiName}}</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 center">
+                        <button class="btn btn-primary btn-zstack" (click)="goToZStack()">Z-Stack</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
+<script>
+    function maxLengthCheck(object) {
+        if (object.value.length > object.maxLength)
+            object.value = object.value.slice(0, object.maxLength)
+    }
+
+    function isNumeric(evt) {
+        var theEvent = evt || window.event;
+        var key = theEvent.keyCode || theEvent.which;
+        key = String.fromCharCode(key);
+        var regex = /[0-9]|\./;
+        if (!regex.test(key)) {
+            theEvent.returnValue = false;
+            if (theEvent.preventDefault) theEvent.preventDefault();
+        }
+    }
+</script> -->

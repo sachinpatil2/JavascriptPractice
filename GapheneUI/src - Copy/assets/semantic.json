@@ -1,0 +1,616 @@
+{
+	"graph": [],
+	"links": [{
+		"source": 0,
+		"target": 1
+	}, {
+		"source": 0,
+		"target": 2
+	}, {
+		"source": 0,
+		"target": 3
+	}, {
+		"source": 0,
+		"target": 4
+	}, {
+		"source": 0,
+		"target": 5
+	}, {
+		"source": 0,
+		"target": 6
+	}, {
+		"source": 0,
+		"target": 7
+	}, {
+		"source": 0,
+		"target": 8
+	}, {
+		"source": 0,
+		"target": 9
+	}, {
+		"source": 0,
+		"target": 10
+	}, {
+		"source": 0,
+		"target": 11
+	}, {
+		"source": 0,
+		"target": 12
+	}, {
+		"source": 0,
+		"target": 13
+	}, {
+		"source": 0,
+		"target": 14
+	}, {
+		"source": 0,
+		"target": 15
+	}, {
+		"source": 0,
+		"target": 16
+	}, {
+		"source": 0,
+		"target": 17
+	}, {
+		"source": 0,
+		"target": 18
+	}, {
+		"source": 0,
+		"target": 19
+	}, {
+		"source": 0,
+		"target": 20
+	}, {
+		"source": 0,
+		"target": 21
+	}, {
+		"source": 0,
+		"target": 22
+	}, {
+		"source": 0,
+		"target": 23
+	}, {
+		"source": 0,
+		"target": 24
+	}, {
+		"source": 0,
+		"target": 25
+	}, {
+		"source": 0,
+		"target": 26
+	}, {
+		"source": 0,
+		"target": 27
+	}, {
+		"source": 0,
+		"target": 28
+	}, {
+		"source": 0,
+		"target": 29
+	}, {
+		"source": 0,
+		"target": 30
+	}, {
+		"source": 0,
+		"target": 31
+	}, {
+		"source": 0,
+		"target": 32
+	}, {
+		"source": 0,
+		"target": 33
+	}, {
+		"source": 0,
+		"target": 34
+	}, {
+		"source": 0,
+		"target": 35
+	}, {
+		"source": 0,
+		"target": 36
+	}, {
+		"source": 0,
+		"target": 37
+	}, {
+		"source": 0,
+		"target": 38
+	}, {
+		"source": 0,
+		"target": 39
+	}, {
+		"source": 0,
+		"target": 40
+	}, {
+		"source": 0,
+		"target": 41
+	}, {
+		"source": 0,
+		"target": 42
+	}, {
+		"source": 0,
+		"target": 43
+	}],
+	"nodes": [{
+		"name": "state energy regulators",
+		"type": "circle",
+		"skill_Level": "6"
+	}, {
+		"name": "Tana Jones",
+		"type": "square",
+		"skill_Level": "5"
+	}, {
+		"name": "Matthew Lenhart",
+		"type": "square",
+		"skill_Level": "3"
+	}, {
+		"name": "Teb Lokey",
+		"type": "square",
+		"skill_Level": "3"
+	}, {
+		"name": "James Derrick",
+		"type": "square",
+		"skill_Level": "2"
+	}, {
+		"name": "Eric Bass",
+		"type": "square",
+		"skill_Level": "2"
+	}, {
+		"name": "Errol McLaughlin",
+		"type": "square",
+		"skill_Level": "2"
+	}, {
+		"name": "Daren Farmer",
+		"type": "square",
+		"skill_Level": "2"
+	}, {
+		"name": "Jeffrey Shankman",
+		"type": "square",
+		"skill_Level": "2"
+	}, {
+		"name": "John Hodge",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Theresa Staab",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Fletcher Sturm",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Greg Whalley",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Joe Quenet",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Richard Sanders",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Bradley Mckay",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Stacy Dickson",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Stanley Horton",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Monique Sanchez",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Dan Hyvl",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Hunter Shively",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Scott Hendrickson",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Jim Schwieger",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Kevin Ruscitti",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Andrea Ring",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Kim Ward",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "John Griffith",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Stacey White",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Andy Zipper",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Peter Keavey",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Jane Tholt",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Kevin Presto",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Bill Rapp",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Andrew Lewis",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Kam Keiser",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Lindy Donoho",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Geir Solberg",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Scott Neal",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Dana Davis",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Cara Semperger",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Shelley Corman",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Robert Badeer",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Tori Kuykendall",
+		"type": "square",
+		"skill_Level": "1"
+	}, {
+		"name": "Randall Gay",
+		"type": "square",
+		"skill_Level": "1"
+	}],
+	"users": [{
+		"userID": 1,
+		"userName": "Tana Jones",
+		"email": "tana.jones@enron.com",
+		"mail_dir": "jones-t",
+		"designation": "Unknown",
+		"skill_Level": "5"
+	}, {
+		"userID": 2,
+		"userName": "Matthew Lenhart",
+		"email": "matthew.lenhart@enron.com",
+		"mail_dir": "lenhart-m",
+		"designation": "Employee",
+		"skill_Level": "3"
+	}, {
+		"userID": 3,
+		"userName": "Teb Lokey",
+		"email": "teb.lokey@enron.com",
+		"mail_dir": "lokey-t",
+		"designation": "Manager",
+		"skill_Level": "3"
+	}, {
+		"userID": 4,
+		"userName": "James Derrick",
+		"email": "james.derrick@enron.com",
+		"mail_dir": "derrick-j",
+		"designation": "In House Lawyer",
+		"skill_Level": "2"
+	}, {
+		"userID": 5,
+		"userName": "Eric Bass",
+		"email": "eric.bass@enron.com",
+		"mail_dir": "bass-e",
+		"designation": "Trader",
+		"skill_Level": "2"
+	}, {
+		"userID": 6,
+		"userName": "Errol McLaughlin",
+		"email": "errol.mclaughlin@enron.com",
+		"mail_dir": "mclaughlin-e",
+		"designation": "Employee",
+		"skill_Level": "2"
+	}, {
+		"userID": 7,
+		"userName": "Daren Farmer",
+		"email": "daren.farmer@enron.com",
+		"mail_dir": "farmer-d",
+		"designation": "Manager",
+		"skill_Level": "2"
+	}, {
+		"userID": 8,
+		"userName": "Jeffrey Shankman",
+		"email": "jeffrey.shankman@enron.com",
+		"mail_dir": "shankman-j",
+		"designation": "President",
+		"skill_Level": "2"
+	}, {
+		"userID": 9,
+		"userName": "John Hodge",
+		"email": "john.hodge@enron.com",
+		"mail_dir": "hodge-j",
+		"designation": "Managing Director",
+		"skill_Level": "1"
+	}, {
+		"userID": 10,
+		"userName": "Theresa Staab",
+		"email": "theresa.staab@enron.com",
+		"mail_dir": "staab-t",
+		"designation": "Employee",
+		"skill_Level": "1"
+	}, {
+		"userID": 11,
+		"userName": "Fletcher Sturm",
+		"email": "fletcher.sturm@enron.com",
+		"mail_dir": "sturm-f",
+		"designation": "Vice President",
+		"skill_Level": "1"
+	}, {
+		"userID": 12,
+		"userName": "Greg Whalley",
+		"email": "greg.whalley@enron.com",
+		"mail_dir": "whalley-g",
+		"designation": "President",
+		"skill_Level": "1"
+	}, {
+		"userID": 13,
+		"userName": "Joe Quenet",
+		"email": "joe.quenet@enron.com",
+		"mail_dir": "quenet-j",
+		"designation": "Trader",
+		"skill_Level": "1"
+	}, {
+		"userID": 14,
+		"userName": "Richard Sanders",
+		"email": "richard.sanders@enron.com",
+		"mail_dir": "sanders-r",
+		"designation": "Vice President",
+		"skill_Level": "1"
+	}, {
+		"userID": 15,
+		"userName": "Bradley Mckay",
+		"email": "brad.mckay@enron.com",
+		"mail_dir": "mckay-b",
+		"designation": "Employee",
+		"skill_Level": "1"
+	}, {
+		"userID": 16,
+		"userName": "Stacy Dickson",
+		"email": "stacy.dickson@enron.com",
+		"mail_dir": "dickson-s",
+		"designation": "Employee",
+		"skill_Level": "1"
+	}, {
+		"userID": 17,
+		"userName": "Stanley Horton",
+		"email": "stanley.horton@enron.com",
+		"mail_dir": "horton-s",
+		"designation": "President",
+		"skill_Level": "1"
+	}, {
+		"userID": 18,
+		"userName": "Monique Sanchez",
+		"email": "monique.sanchez@enron.com",
+		"mail_dir": "sanchez-m",
+		"designation": "Unknown",
+		"skill_Level": "1"
+	}, {
+		"userID": 19,
+		"userName": "Dan Hyvl",
+		"email": "dan.hyvl@enron.com",
+		"mail_dir": "hyvl-d",
+		"designation": "Employee",
+		"skill_Level": "1"
+	}, {
+		"userID": 20,
+		"userName": "Hunter Shively",
+		"email": "hunter.shively@enron.com",
+		"mail_dir": "shively-h",
+		"designation": "Vice President",
+		"skill_Level": "1"
+	}, {
+		"userID": 21,
+		"userName": "Scott Hendrickson",
+		"email": "scott.hendrickson@enron.com",
+		"mail_dir": "hendrickson-s",
+		"designation": "Unknown",
+		"skill_Level": "1"
+	}, {
+		"userID": 22,
+		"userName": "Jim Schwieger",
+		"email": "jim.schwieger@enron.com",
+		"mail_dir": "schwieger-j",
+		"designation": "Trader",
+		"skill_Level": "1"
+	}, {
+		"userID": 23,
+		"userName": "Kevin Ruscitti",
+		"email": "kevin.ruscitti@enron.com",
+		"mail_dir": "ruscitti-k",
+		"designation": "Trader",
+		"skill_Level": "1"
+	}, {
+		"userID": 24,
+		"userName": "Andrea Ring",
+		"email": "andrea.ring@enron.com",
+		"mail_dir": "ring-a",
+		"designation": "Unknown",
+		"skill_Level": "1"
+	}, {
+		"userID": 25,
+		"userName": "Kim Ward",
+		"email": "kim.ward@enron.com",
+		"mail_dir": "ward-k",
+		"designation": "Unknown",
+		"skill_Level": "1"
+	}, {
+		"userID": 26,
+		"userName": "John Griffith",
+		"email": "john.griffith@enron.com",
+		"mail_dir": "griffith-j",
+		"designation": "Unknown",
+		"skill_Level": "1"
+	}, {
+		"userID": 27,
+		"userName": "Stacey White",
+		"email": "stacey.white@enron.com",
+		"mail_dir": "white-s",
+		"designation": "Unknown",
+		"skill_Level": "1"
+	}, {
+		"userID": 28,
+		"userName": "Andy Zipper",
+		"email": "andy.zipper@enron.com",
+		"mail_dir": "zipper-a",
+		"designation": "Vice President",
+		"skill_Level": "1"
+	}, {
+		"userID": 29,
+		"userName": "Peter Keavey",
+		"email": "peter.keavey@enron.com",
+		"mail_dir": "keavey-p",
+		"designation": "Employee",
+		"skill_Level": "1"
+	}, {
+		"userID": 30,
+		"userName": "Jane Tholt",
+		"email": "jane.tholt@enron.com",
+		"mail_dir": "tholt-j",
+		"designation": "Vice President",
+		"skill_Level": "1"
+	}, {
+		"userID": 31,
+		"userName": "Kevin Presto",
+		"email": "kevin.presto@enron.com",
+		"mail_dir": "presto-k",
+		"designation": "Vice President",
+		"skill_Level": "1"
+	}, {
+		"userID": 32,
+		"userName": "Bill Rapp",
+		"email": "bill.rapp@enron.com",
+		"mail_dir": "rapp-b",
+		"designation": "Unknown",
+		"skill_Level": "1"
+	}, {
+		"userID": 33,
+		"userName": "Andrew Lewis",
+		"email": "andrew.lewis@enron.com",
+		"mail_dir": "lewis-a",
+		"designation": "Director",
+		"skill_Level": "1"
+	}, {
+		"userID": 34,
+		"userName": "Kam Keiser",
+		"email": "kam.keiser@enron.com",
+		"mail_dir": "keiser-k",
+		"designation": "Employee",
+		"skill_Level": "1"
+	}, {
+		"userID": 35,
+		"userName": "Lindy Donoho",
+		"email": "lindy.donoho@enron.com",
+		"mail_dir": "donoho-l",
+		"designation": "Employee",
+		"skill_Level": "1"
+	}, {
+		"userID": 36,
+		"userName": "Geir Solberg",
+		"email": "geir.solberg@enron.com",
+		"mail_dir": "solberg-g",
+		"designation": "Employee",
+		"skill_Level": "1"
+	}, {
+		"userID": 37,
+		"userName": "Scott Neal",
+		"email": "scott.neal@enron.com",
+		"mail_dir": "neal-s",
+		"designation": "Vice President",
+		"skill_Level": "1"
+	}, {
+		"userID": 38,
+		"userName": "Dana Davis",
+		"email": "dana.davis@enron.com",
+		"mail_dir": "davis-d",
+		"designation": "Vice President",
+		"skill_Level": "1"
+	}, {
+		"userID": 39,
+		"userName": "Cara Semperger",
+		"email": "cara.semperger@enron.com",
+		"mail_dir": "semperger-c",
+		"designation": "Employee",
+		"skill_Level": "1"
+	}, {
+		"userID": 40,
+		"userName": "Shelley Corman",
+		"email": "shelley.corman@enron.com",
+		"mail_dir": "corman-s",
+		"designation": "Vice President",
+		"skill_Level": "1"
+	}, {
+		"userID": 41,
+		"userName": "Robert Badeer",
+		"email": "robert.badeer@enron.com",
+		"mail_dir": "badeer-r",
+		"designation": "Director",
+		"skill_Level": "1"
+	}, {
+		"userID": 42,
+		"userName": "Tori Kuykendall",
+		"email": "tori.kuykendall@enron.com",
+		"mail_dir": "kuykendall-t",
+		"designation": "Trader",
+		"skill_Level": "1"
+	}, {
+		"userID": 43,
+		"userName": "Randall Gay",
+		"email": "randall.gay@enron.com",
+		"mail_dir": "gay-r",
+		"designation": "Unknown",
+		"skill_Level": "1"
+	}],
+	"directed": false,
+	"multigraph": false,
+	"isDataFound": true,
+	"similarTopics": ["energy project presentation", "energy research report"]
+}

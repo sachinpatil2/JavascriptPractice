@@ -1,0 +1,82 @@
+<!-- <div class="row" style="background-color: #4e86fd;color: white">
+    <div class="col-md-6" style="font-size: 35px;padding: 1em;
+    padding-left: 2em;">
+        Ricoh
+    </div>
+    <div class="col-md-6 pull-right" style="font-size: 35px;
+    padding: 1em;
+    padding-left: 7em;">
+        Ricoh Admin Application
+    </div>
+
+
+</div> -->
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+
+            <form class="login100-form validate-form" name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm"
+                novalidate>
+                <span class="login100-form-title">
+                    Cynvenio
+                </span>
+
+                <div class="wrap-input100 validate-input" [ngClass]="{ 'alert-validate': f.submitted && !username.valid }"
+                    data-validate="Username is required">
+                    <input type="text" class="input100 form-control" name="username" [(ngModel)]="model.username"
+                        #username="ngModel" placeholder="Username" required />
+                    <!-- <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div> -->
+
+                    <!-- <input class="input100" type="text" name="email" placeholder="Username" required> -->
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                </div>
+
+                <div class="wrap-input100 validate-input" [ngClass]="{ 'alert-validate': f.submitted && !password.valid }"
+                    data-validate="Password is required">
+                    <input class="input100" type="password" name="password" [(ngModel)]="model.password" #password="ngModel"
+                        placeholder="Password" required>
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <!-- <div class="row">
+                    <div class="col-lg-6 col-md-6">
+
+                        <div class="contact100-form-checkbox">
+                            <div class="text-center p-t-12">
+                                <mat-checkbox class="example-margin">
+                                    <label class="label-checkbox100" for="ckb1">
+                                        Remember me
+                                    </label>
+                                </mat-checkbox>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="text-center p-t-12">
+                            <a routerLink="/forgotpwd" class="txt2" href="#">
+                                Forgot Password?
+                            </a>
+                        </div>
+                    </div>
+
+                </div> -->
+                <div class="container-login100-form-btn">
+                    <button type="submit" class="login100-form-btn">
+                        Login
+                    </button>
+                </div>
+                <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                <div *ngIf="error" class="container-login100-form-btn">{{errorMsg}}</div>
+
+
+            </form>
+        </div>
+    </div>
+</div>
